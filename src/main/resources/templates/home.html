@@ -6,14 +6,14 @@
     <title>Trajan</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{../css/style.css}" rel="stylesheet">
-    <script type="text/javascript" th:src="@{../js/timer.js}"></script>
+
 </head>
 
 <body>
 <div class="timerBox">
-    <h1 th:text="${timerLength}"></h1>
-    <p id="checkJS">This is a sample box that will contain the timer.</p>
+    <h1 id="timer"></h1>
 </div>
+<script type="text/javascript" th:src="@{../js/timer.js}"></script>
 </body>
 
 </html>
