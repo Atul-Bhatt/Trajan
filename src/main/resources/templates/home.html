@@ -3,14 +3,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Good Thymes Virtual Grocery</title>
+    <title>Trajan</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:href="@{../style.css}" rel="stylesheet">
+    <link th:href="@{../css/style.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{../js/timer.js}"></script>
 </head>
 
 <body>
 <div class="timerBox">
-    <p>This is a sample box that will contain the timer.</p>
+    <h1 th:text="${timerLength}"></h1>
+    <p id="checkJS">This is a sample box that will contain the timer.</p>
 </div>
 </body>
 
