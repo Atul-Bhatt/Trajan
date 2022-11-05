@@ -1,9 +1,24 @@
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
+const playBtn = document.querySelector('.circle__btn');
+const wave1 = document.querySelector('.circle__back-1');
+const wave2 = document.querySelector('.circle__back-2');
+
 var start = Date.now();
 var timer = 120;// in seconds
 var minutes = (timer / 60) - 1;
 var seconds = 0;
 if(timer > 60)  seconds = 60;
 else seconds = timer;
+
+playBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  pause.classList.toggle('visibility');
+  play.classList.toggle('visibility');
+  playBtn.classList.toggle('shadow');
+  wave1.classList.toggle('paused');
+  wave2.classList.toggle('paused');
+});
 
 var si = setInterval(function() {
     var delta = Date.now() - start; // milliseconds elapsed since start
