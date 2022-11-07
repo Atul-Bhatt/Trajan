@@ -17,6 +17,10 @@
 <div class="main-container">
     <div class="list-container" id="task-list">
         <h1 class="list-header">To-Do List</h1>
+        <div class="add-task">
+            <input type="text" autocomplete="off" placeholder="Add New Task" v-model="task.name" @keyup.enter="newItem" class="task-input">
+            <input type="submit" value="" class="submit-task" @click="newItem" title="Add Task">
+        </div>
     </div>
     <div class="card">
         <div class="timerBox">
