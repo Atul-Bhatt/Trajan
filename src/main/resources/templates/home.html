@@ -21,6 +21,15 @@
             <input type="text" autocomplete="off" placeholder="Add New Task" v-model="task.name" @keyup.enter="newItem" class="task-input">
             <input type="submit" value="" class="submit-task" @click="newItem" title="Add Task">
         </div>
+        <ul class="task-list">
+            <li class="task-list-item">
+                <label class="task-list-item-label">
+                    <input type="checkbox">
+                    <span>{{task.name}}</span>
+                </label>
+                <span @click="delItem(task)" class="delete-btn" title="Delete Task">{{task.del}}</span>
+            </li>
+        </ul>
     </div>
     <div class="card">
         <div class="timerBox">
