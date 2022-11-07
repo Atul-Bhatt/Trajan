@@ -15,10 +15,11 @@ body {
 
 .main-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background: var(--greyLight-1);
 }
 
+/* Timer */
 .timerBox {
     border: solid 1px grey;
     border-radius: 10px;
@@ -31,6 +32,7 @@ h1 {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* Play-Pause Button */
 .circle {
   grid-column: 2/3;
   grid-row: 4/6;
@@ -141,4 +143,19 @@ h1 {
   right: 2rem;
   bottom: 1rem;
   color: #EA4C89;
+}
+
+/* To-Do List */
+.list-container {
+  border-radius: 8px;
+  width: 500px;
+  background-color: #10101d;
+  padding 24px;
+}
+
+.list-header {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 14px 0 12px 24px;
+  color: #fff;
 }
