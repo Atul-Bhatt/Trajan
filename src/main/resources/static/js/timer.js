@@ -11,6 +11,7 @@ var seconds = 0;
 if(timer > 60)  seconds = 60;
 else seconds = timer;
 
+/* Play pause button */
 playBtn.addEventListener('click', function(e) {
   e.preventDefault();
   pause.classList.toggle('visibility');
@@ -20,6 +21,7 @@ playBtn.addEventListener('click', function(e) {
   wave2.classList.toggle('paused');
 });
 
+/* Running the timer */
 var si = setInterval(function() {
     var delta = Date.now() - start; // milliseconds elapsed since start
 
@@ -38,3 +40,27 @@ var si = setInterval(function() {
         minutes--;
     }
 }, 1000); // update about every second
+
+const taskInput = document.querySelector('.task-input');
+
+taskInput.addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+        const li = document.createElement("li");
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        const span1 = document.createElement("span");
+        const span2 = document.createElement("span");
+
+        li.classList.add("task-list-item");
+        label.classList.add("task-list-item-label");
+        input.classList.add("task-input-field");
+        span1.innerHTML = taskInput.value;
+        span2.classList.add("delete-btn");
+
+        label.appendChild(input);
+        label.appendChild(span1);
+        li.appendChild(label);
+        li.appendChild(span2);
+        document.querySelector(".task-list").appendChild(li);
+    }
+});

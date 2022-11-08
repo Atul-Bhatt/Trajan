@@ -231,7 +231,7 @@ ul {
   align-items: center;
   padding: 8px;
 }
-.task-list-item input {
+.task-input-field {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -248,11 +248,11 @@ ul {
      -moz-appearance: none;
           appearance: none;
 }
-.task-list-item input:hover {
+.task-input-field:hover {
   border-color: var(--checkbox-color);
   box-shadow: 0 0 0 3px var(--checkbox-shadow);
 }
-.task-list-item input:checked {
+.task-input-field:checked {
   background-size: 10px;
   border: 1px solid var(--checkbox-color);
   background-color: var(--checkbox-color);
