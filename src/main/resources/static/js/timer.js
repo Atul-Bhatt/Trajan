@@ -57,21 +57,30 @@ submitTask.addEventListener('click', function(e) {
 
 function addTask() {
     const li = document.createElement("li");
-            const label = document.createElement("label");
-            const input = document.createElement("input");
-            const span1 = document.createElement("span");
-            const span2 = document.createElement("span");
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
 
-            li.classList.add("task-list-item");
-            label.classList.add("task-list-item-label");
-            input.classList.add("task-input-field");
-            span1.innerHTML = taskInput.value;
-            span2.title = "Delete Task";
-            span2.classList.add("delete-btn");
+    li.classList.add("task-list-item");
+    label.classList.add("task-list-item-label");
+    input.classList.add("task-input-field");
+    input.type = "checkbox";
+    span1.innerHTML = taskInput.value;
+    span1.classList.add("task-text");
+    span2.title = "Delete Task";
+    span2.classList.add("delete-btn");
+    span2.onclick = deleteTask;
 
-            label.appendChild(input);
-            label.appendChild(span1);
-            li.appendChild(label);
-            li.appendChild(span2);
-            document.querySelector(".task-list").appendChild(li);
+    label.appendChild(input);
+    label.appendChild(span1);
+    li.appendChild(label);
+    li.appendChild(span2);
+    document.querySelector(".task-list").appendChild(li);
+    taskInput.value = "";
+}
+
+/* Delete a task */
+function deleteTask() {
+    this.parentElement.remove();
 }
