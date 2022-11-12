@@ -1,6 +1,11 @@
 package io.productivityapp.Trajan.model;
 
 public class TaskModel {
+
+    public TaskModel(String task, int hours) {
+        this.task = task;
+        this.taskHours = hours;
+    }
     private String task;
     private int taskHours;
 

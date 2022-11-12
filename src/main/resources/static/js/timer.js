@@ -46,12 +46,14 @@ var si = setInterval(function() {
 const taskInput = document.querySelector('.task-input');
 taskInput.addEventListener('keypress', function(e) {
     if(e.key === 'Enter') {
+        postTask();
         addTask();
     }
 });
 
 const submitTask = document.querySelector(".submit-task");
 submitTask.addEventListener('click', function(e) {
+    postTask();
     addTask();
 });
 
@@ -83,4 +85,17 @@ function addTask() {
 /* Delete a task */
 function deleteTask() {
     this.parentElement.remove();
+}
+
+/* Pass Created Tasks to Controller */
+function postTask() {
+    fetch("/tasks", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'task': taskInput.value,
+                              'hours': 1
+        })
+        });
 }
