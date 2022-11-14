@@ -294,3 +294,12 @@ input[type=radio] {
 .decrement-timer {
     cursor: pointer;
 }
+
+/* Timer Input */
+#timer-length {
+    font-size: 42px;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    width: 150px;
+    text-align: center;
+}

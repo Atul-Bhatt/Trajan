@@ -4,6 +4,11 @@ const playBtn = document.querySelector('.circle__btn');
 const wave1 = document.querySelector('.circle__back-1');
 const wave2 = document.querySelector('.circle__back-2');
 
+/* Increment-Decrement timer buttons */
+const incrementTimer = document.querySelector('.increment-timer');
+const decrementTimer = document.querySelector('.decrement-timer');
+const timerLength = document.querySelector('#timer-length');
+
 var start = Date.now();
 var timer = 120;// in seconds
 var minutes = (timer / 60) - 1;
@@ -99,3 +104,12 @@ function postTask() {
         })
         });
 }
+
+/* Increment-Decrement timer */
+incrementTimer.addEventListener('click', function(e) {
+    if(timerLength.value < 180)     timerLength.value = parseInt(timerLength.value) + 15;
+});
+
+decrementTimer.addEventListener('click', function(e) {
+    if(timerLength.value > 15)    timerLength.value = timerLength.value - 15;
+});
