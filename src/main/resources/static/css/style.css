@@ -22,7 +22,8 @@ body {
 }
 
 /* Timer */
-.timerBox {
+.timer-box {
+    visibility: hidden;
     border: solid 1px grey;
     border-radius: 10px;
     width: 130px;
@@ -285,6 +286,10 @@ input[type=radio] {
 /* Timer Begin Input */
 .timer-input-container {
     display: flex;
+}
+
+.timer-input-buttons {
+    display: grid;
 }
 
 .increment-timer {
