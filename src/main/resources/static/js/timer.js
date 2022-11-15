@@ -13,7 +13,9 @@ const timerLength = document.querySelector('#timer-length');
 const timerBox = document.querySelector('.timer-box');
 const timerInputContainer = document.querySelector('.timer-input-container');
 
-function playTimer() {
+var si;
+
+function newTimer() {
     var start = Date.now();
     var timer = parseInt(timerLength.value) * 60;// in seconds
     var minutes = (timer / 60) - 1;
@@ -21,8 +23,11 @@ function playTimer() {
     if(timer > 60)  seconds = 60;
     else seconds = timer;
 
+    /* Stop previous timer */
+    clearInterval(si);
+
     /* Running the timer */
-    var si = setInterval(function() {
+    si = setInterval(function() {
         var delta = Date.now() - start; // milliseconds elapsed since start
 
         if(timer <= 0){
@@ -45,7 +50,7 @@ function playTimer() {
 /* Play pause button */
 playBtn.addEventListener('click', function(e) {
   e.preventDefault();
-  playTimer();
+  newTimer();
   pause.classList.toggle('visibility');
   play.classList.toggle('visibility');
   playBtn.classList.toggle('shadow');
