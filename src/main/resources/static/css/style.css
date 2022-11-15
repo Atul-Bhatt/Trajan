@@ -75,14 +75,14 @@ h1 {
   transition: all 0.2s linear;
 }
 .circle__btn .play.visibility {
-  opacity: 1;
+  opacity: 0;
 }
 .circle__btn .pause {
   position: absolute;
   transition: all 0.2s linear;
 }
 .circle__btn .pause.visibility {
-  opacity: 0;
+  opacity: 1;
 }
 .circle__back-1, .circle__back-2 {
   grid-row: 1/2;
@@ -307,4 +307,14 @@ input[type=radio] {
     color: black;
     width: 150px;
     text-align: center;
+}
+
+/* Timer Input, Timer Clock Visibility */
+
+.timer-box.visibility {
+    visibility: visible;
+}
+
+.timer-input-container.visibility {
+    visibility: hidden;
 }

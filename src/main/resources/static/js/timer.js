@@ -9,6 +9,10 @@ const incrementTimer = document.querySelector('.increment-timer');
 const decrementTimer = document.querySelector('.decrement-timer');
 const timerLength = document.querySelector('#timer-length');
 
+/* Start Stop timer. */
+const timerBox = document.querySelector('.timer-box');
+const timerInputContainer = document.querySelector('.timer-input-container');
+
 var start = Date.now();
 var timer = 120;// in seconds
 var minutes = (timer / 60) - 1;
@@ -24,6 +28,8 @@ playBtn.addEventListener('click', function(e) {
   playBtn.classList.toggle('shadow');
   wave1.classList.toggle('paused');
   wave2.classList.toggle('paused');
+  timerBox.classList.toggle('visibility');
+  timerInputContainer.classList.toggle('visibility');
 });
 
 /* Running the timer */
