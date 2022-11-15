@@ -13,16 +13,40 @@ const timerLength = document.querySelector('#timer-length');
 const timerBox = document.querySelector('.timer-box');
 const timerInputContainer = document.querySelector('.timer-input-container');
 
-var start = Date.now();
-var timer = 120;// in seconds
-var minutes = (timer / 60) - 1;
-var seconds = 0;
-if(timer > 60)  seconds = 60;
-else seconds = timer;
+function playTimer() {
+    var start = Date.now();
+    var timer = parseInt(timerLength.value) * 60;// in seconds
+    console.log(timer);
+    var minutes = (timer / 60) - 1;
+    var seconds = 0;
+    if(timer > 60)  seconds = 60;
+    else seconds = timer;
+
+    /* Running the timer */
+    var si = setInterval(function() {
+        var delta = Date.now() - start; // milliseconds elapsed since start
+
+        if(timer <= 0){
+            clearInterval(si);
+        }
+        if(minutes < 10)    minuteString = "0" + minutes;
+        else minuteString = minutes;
+        if(seconds < 10)    secondString = "0" + seconds;
+        else secondString = seconds;
+        document.getElementById("timer").innerHTML = minuteString + ":" + secondString;
+        timer--;
+        seconds--;
+        if((timer > 59) && (timer % 60) == 0){
+            seconds = 60
+            minutes--;
+        }
+    }, 1000); // update about every second
+}
 
 /* Play pause button */
 playBtn.addEventListener('click', function(e) {
   e.preventDefault();
+  playTimer();
   pause.classList.toggle('visibility');
   play.classList.toggle('visibility');
   playBtn.classList.toggle('shadow');
@@ -31,27 +55,6 @@ playBtn.addEventListener('click', function(e) {
   timerBox.classList.toggle('visibility');
   timerInputContainer.classList.toggle('visibility');
 });
-
-/* Running the timer */
-var si = setInterval(function() {
-    var delta = Date.now() - start; // milliseconds elapsed since start
-
-    if(timer <= 0){
-        clearInterval(si);
-    }
-    if(minutes < 10)    minuteString = "0" + minutes;
-    else minuteString = minutes;
-    if(seconds < 10)    secondString = "0" + seconds;
-    else secondString = seconds;
-    document.getElementById("timer").innerHTML = minuteString + ":" + secondString;
-    timer--;
-    seconds--;
-    if((timer > 59) && (timer % 60) == 0){
-        seconds = 60
-        minutes--;
-    }
-}, 1000); // update about every second
-
 
 /* Create a new task */
 const taskInput = document.querySelector('.task-input');
