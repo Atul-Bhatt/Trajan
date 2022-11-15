@@ -16,7 +16,6 @@ const timerInputContainer = document.querySelector('.timer-input-container');
 function playTimer() {
     var start = Date.now();
     var timer = parseInt(timerLength.value) * 60;// in seconds
-    console.log(timer);
     var minutes = (timer / 60) - 1;
     var seconds = 0;
     if(timer > 60)  seconds = 60;

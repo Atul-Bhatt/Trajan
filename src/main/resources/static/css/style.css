@@ -70,19 +70,21 @@ h1 {
   box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
 }
 .circle__btn .play {
+  color: black;
   position: absolute;
   opacity: 0;
   transition: all 0.2s linear;
 }
 .circle__btn .play.visibility {
-  opacity: 0;
+  opacity: 1;
 }
 .circle__btn .pause {
+  color: black;
   position: absolute;
   transition: all 0.2s linear;
 }
 .circle__btn .pause.visibility {
-  opacity: 1;
+  opacity: 0;
 }
 .circle__back-1, .circle__back-2 {
   grid-row: 1/2;
