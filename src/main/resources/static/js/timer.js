@@ -54,8 +54,8 @@ playBtn.addEventListener('click', function(e) {
   pause.classList.toggle('visibility');
   play.classList.toggle('visibility');
   playBtn.classList.toggle('shadow');
-  wave1.classList.toggle('paused');
-  wave2.classList.toggle('paused');
+  wave1.classList.toggle('running');
+  wave2.classList.toggle('running');
   timerBox.classList.toggle('visibility');
   timerInputContainer.classList.toggle('visibility');
 });

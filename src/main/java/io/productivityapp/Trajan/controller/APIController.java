@@ -1,8 +1,7 @@
 package io.productivityapp.Trajan.controller;
 
-import io.productivityapp.Trajan.DataService;
+import io.productivityapp.Trajan.service.DataService;
 import io.productivityapp.Trajan.model.TaskModel;
-import org.apache.coyote.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
