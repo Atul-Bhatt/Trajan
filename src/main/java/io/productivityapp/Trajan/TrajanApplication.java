@@ -15,6 +15,6 @@ public class TrajanApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args) {
-		this.taskDoa.createTable();
+//		this.taskDoa.createTable();
 	}
 }

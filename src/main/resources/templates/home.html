@@ -15,7 +15,8 @@
 
 <body>
 <div class="main-container">
-    <div class="list-container" id="task-list">
+    <div class="task-and-timer-flex">
+        <div class="list-container" id="task-list">
         <h1 class="list-header">To-Do List</h1>
         <div class="add-task">
             <input type="text" autocomplete="off" placeholder="Add New Task" class="task-input">
@@ -24,7 +25,7 @@
         <ul class="task-list">
         </ul>
     </div>
-    <div class="card">
+        <div class="card">
         <div class="timer-box" id="timer-box">
             <h1 id="timer"></h1>
         </div>
@@ -55,6 +56,10 @@
             <span class="circle__back-1"></span>
             <span class="circle__back-2"></span>
         </div>
+    </div>
+    </div>
+    <div class="streak-container">
+        <h1>This is the streak container.</h1>
     </div>
 </div>
 <script type="text/javascript" th:src="@{../js/timer.js}"></script>
