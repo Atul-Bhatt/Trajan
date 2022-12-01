@@ -12,7 +12,7 @@
 }
 
 body {
-    background: var(--greyLight-1);
+    background: var(--white);
 }
 
 .main-container {
@@ -22,16 +22,31 @@ body {
 }
 
 .streak-container {
-    margin-left: 64px;
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-left: 83px;
+    background-color: #10101d;
+    padding: 24px;
+    width: 785px;
+}
+
+.streak-container h1 {
+    color: #fff;
 }
 
 .task-and-timer-flex {
     display: flex;
-    justify-content: space-around;
-    background: var(--greyLight-1);
+    justify-content: center;
 }
 
 /* Timer */
+.timer-card {
+    background-color: #10101d;
+    border-radius: 8px;
+    width: 275px;
+    margin-left: 10px;
+}
+
 .timer-box {
     visibility: hidden;
     border: solid 1px grey;
@@ -40,6 +55,7 @@ body {
     padding: 10px;
     text-align: center;
 }
+
 h1 {
     font-size: 42px;
     font-family: 'Noto Sans', sans-serif;
@@ -49,6 +65,7 @@ h1 {
 .list-container {
   border-radius: 8px;
   width: 500px;
+  height: 335px;
   background-color: #10101d;
   padding: 24px;
 }
