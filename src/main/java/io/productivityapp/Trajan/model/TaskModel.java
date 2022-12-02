@@ -1,13 +1,15 @@
 package io.productivityapp.Trajan.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity (name="tasks")
 public class TaskModel {
     @Id
     private int id;
     private String task;
+    @Column(name="hours")
     private int taskHours;
 
 
