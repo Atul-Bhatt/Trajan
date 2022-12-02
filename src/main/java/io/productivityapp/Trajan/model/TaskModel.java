@@ -1,12 +1,10 @@
 package io.productivityapp.Trajan.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity (name="tasks")
 public class TaskModel {
-    @Id
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     private String task;
     @Column(name="hours")
