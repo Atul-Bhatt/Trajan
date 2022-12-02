@@ -47,11 +47,15 @@ body {
     margin-left: 10px;
 }
 
+.timer {
+    opacity: 0;
+}
+
+.timer.visibility {
+    opacity: 1;
+}
+
 .timer-box {
-    /* visibility: hidden; */
-    border: solid 1px grey;
-    border-radius: 10px;
-    width: 130px;
     padding: 10px;
     text-align: center;
 }
@@ -228,6 +232,18 @@ input[type=radio] {
 
 .timer-box.visibility {
     visibility: visible;
+}
+
+.pause {
+    opacity: 0;
+}
+
+.pause.visibility {
+    opacity: 1;
+}
+
+.play.visibility {
+    visibility: hidden;
 }
 
 .timer-input-container.visibility {

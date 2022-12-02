@@ -1,8 +1,6 @@
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');
 const playBtn = document.querySelector('.circle__btn');
-const wave1 = document.querySelector('.circle__back-1');
-const wave2 = document.querySelector('.circle__back-2');
 
 /* Increment-Decrement timer buttons */
 const incrementTimer = document.querySelector('.increment-timer');
@@ -10,7 +8,7 @@ const decrementTimer = document.querySelector('.decrement-timer');
 const timerLength = document.querySelector('#timer-length');
 
 /* Start Stop timer. */
-const timerBox = document.querySelector('.timer-box');
+const timerBox = document.querySelector('.timer');
 const timerInputContainer = document.querySelector('.timer-input-container');
 
 var si;
@@ -54,8 +52,6 @@ playBtn.addEventListener('click', function(e) {
   pause.classList.toggle('visibility');
   play.classList.toggle('visibility');
   playBtn.classList.toggle('shadow');
-  wave1.classList.toggle('running');
-  wave2.classList.toggle('running');
   timerBox.classList.toggle('visibility');
   timerInputContainer.classList.toggle('visibility');
 });
