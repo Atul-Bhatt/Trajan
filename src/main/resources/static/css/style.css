@@ -58,6 +58,8 @@ body {
 .timer-box {
     padding: 10px;
     text-align: center;
+    position: absolute;
+    right: 50%;
 }
 
 h1 {
@@ -205,6 +207,8 @@ input[type=radio] {
 /* Timer Begin Input */
 .timer-input-container {
     display: flex;
+    position: absolute;
+    right: 50%;
 }
 
 .timer-input-buttons {
@@ -234,12 +238,27 @@ input[type=radio] {
     visibility: visible;
 }
 
+.timer-and-timer-input {
+    position: relative;
+}
+
+.circle__btn {
+    position: relative;
+}
+
 .pause {
     opacity: 0;
+    position: absolute;
+    right: 50%;
 }
 
 .pause.visibility {
     opacity: 1;
+}
+
+.play {
+    position: absolute;
+    right: 50%;
 }
 
 .play.visibility {
