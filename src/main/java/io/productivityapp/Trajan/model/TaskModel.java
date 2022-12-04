@@ -10,6 +10,8 @@ public class TaskModel {
     @Column(name="hours")
     private int taskHours;
 
+    public TaskModel() { }
+
 
     public TaskModel(String task, int hours) {
         this.id = id;
